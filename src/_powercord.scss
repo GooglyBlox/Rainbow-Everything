@@ -1,98 +1,407 @@
-@use 'badges';
+:root {
 
-@each $userID, $badgeLink in badges.$users {
-    [data-author-id='#{$userID}'] .username-1A8OIy, // Messaegs
-    [data-user-id="#{$userID}"] + .header-3uLluP, // Beginning of DMs
-    [data-user-id="#{$userID}"] + .text-37NqbO .username-2b1r56, // Friends List
-    [data-user-id="#{$userID}"] + .listName-U3shDM .username-2b1r56 // Mutual Friends
-    {
-        &::before {
-            content: '';
-            background: url($badgeLink) center/100% no-repeat;
+@keyframes rainbow-watermark {
+  from {color: #6666ff}
+  25%  {color: #0099ff}
+  50%  {color: #00ff00}
+  75%  {color: #ff3399}
+  100% {color: #6666ff}
+}
+.wordmark-2iDDfm {
+  animation: rainbow-watermark 5s ease-in-out infinite;
+}
+
+/**
+ * Snippet from #css-snippets applied the Sep 22, 2021 at 9:48:18 PM
+ * Created by MulverineX#0001 (178551656714076161)
+ * Snippet ID: 755182118673317979
+ */
+@keyframes pride {
+        100%,0%{
+            color: rgb(255,0,0);
         }
+        8%{
+            color: rgb(255,127,0);
+        }
+        16%{
+            color: rgb(255,255,0);
+        }
+        25%{
+            color: rgb(127,255,0);
+        }
+        33%{
+            color: rgb(0,255,0);
+        }
+        41%{
+            color: rgb(0,255,127);
+        }
+        50%{
+            color: rgb(0,255,255);
+        }
+        58%{
+            color: rgb(0,127,255);
+        }
+        66%{
+            color: rgb(0,0,255);
+        }
+        75%{
+            color: rgb(127,0,255);
+        }
+        83%{
+            color: rgb(255,0,255);
+        }
+        91%{
+            color: rgb(255,0,127);
+        }
+}
+
+.button-14-BFJ{
+  transition: 0.2s;
+}
+.button-14-BFJ:hover{
+  padding-bottom: 5px;
+  transition: 0.2;
+  animation-name: pride;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+/** 755182118673317979 */
+
+/**
+ * Snippet from #css-snippets applied the Sep 22, 2021 at 9:44:05 PM
+ * Created by Creation's#0001 (209830981060788225)
+ * Snippet ID: 755170014893572157
+ */
+@keyframes rainbow {
+    0% {
+        background-position: 0% 82%
+    }
+    50% {
+        background-position: 100% 19%
+    }
+    100% {
+        background-position: 0% 82%
     }
 }
 
-.userPopout-xaxa6l[data-user-id="327559129705218049"] .profileBadges-ohc0Vu::before {
-  content: "";
-  position: relative;
-  width: 20px;
-  height: 17px;
-  margin: 1.5px 6px 0 0;
-  pointer-events: none;
-  background: url("https://cdn.discordapp.com/emojis/837199476317093910.png") center/100% no-repeat;
+.powercord-spotify .spotify-seek-bar-progress {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+    -webkit-animation: rainbow 18s ease infinite;
+    -z-animation: rainbow 18s ease infinite;
+    -o-animation: rainbow 18s ease infinite;
+    animation: rainbow 18s ease infinite;
 }
+/** 755170014893572157 */
 
-.member-3-YXUe .wrapper-3t9DeA[data-user-id="327559129705218049"]::before,{
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 14px;
-  bottom: -3px;
-  left: -5px;
-  z-index: 2;
-  background: url("https://cdn.discordapp.com/emojis/837199476317093910.png") no-repeat;
-  background-size: 85%;
-  border-radius: 0 5px 0 0;
-  pointer-events: none;
-}
-
-.message-2qnXI6[data-user-id="327559129705218049"] > :not(.repliedMessage-VokQwo) .username-1A8OIy,
-.message-2qnXI6[data-author-id="327559129705218049"] > :not(.repliedMessage-VokQwo) .username-1A8OIy,
-.message-2qnXI6[vz-user-id="327559129705218049"] .username-1A8OIy,
-.channel-2QD9_O[data-user-id="327559129705218049"] .overflow-WK9Ogt,
-.channel-2QD9_O[vz-user-id="327559129705218049"] .overflow-WK9Ogt,
-.member-3-YXUe[data-user-id="327559129705218049"] .roleColor-rz2vM0,
-.member-3-YXUe[vz-user-id="327559129705218049"] .roleColor-rz2vM0,
-.userPopout-xaxa6l[data-user-id="327559129705218049"] .username-2b1r56,
-.userPopout-xaxa6l[vz-user-id="327559129705218049"] .username-2b1r56,
-.root-3QyAh1[data-user-id="327559129705218049"] .username-2b1r56 {
-  color: transparent !important;
-  font-weight: bold;
-  background-size: 300%;
-  animation: shine 10s linear infinite;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(-60deg, #000000 0%, #ffffff 50%, #000000 100%);
-}
-
-
-
-@keyframes shine {
-  to {
-    background-position: 300% center;
+keyframes rainbow-server-settings {
+  from {
+    color: #33FF00;
+  }
+  25% {
+    color: #FFE600;
+  }
+  50% {
+    color: red;
+  }
+  75% {
+    color: #EA00FF;
+  }
+  100% {
+    color: #008CFF;
   }
 }
-@keyframes shine-reversed {
-  to {
-    background-position: -300% center;
-  }
+.button-1w5pas {
+  animation: rainbow-server-settings 4s ease-in-out infinite;
 }
 
-// Rainbow Circle for FreestuffBot
+.name-1jkAdW {
+  animation: rainbow-server-settings 4s ease-in-out infinite;
+}
+
+#message-actions-pin, #message-pin, #message-unpin {
+  color: skyblue;
+}
+
+#message-actions-pin:hover, #message-pin:hover, #message-unpin:hover {
+  background-color: #67a7c0;
+  color: #fff;
+}
+
+#message-actions-reply, #message-reply {
+  color: khaki;
+}
+
+#message-actions-reply:hover, #message-reply:hover {
+  background-color: #c5bb5d;
+  color: #fff;
+}
+
+#message-actions-thread, #message-thread {
+  color: #69c069;
+}
+
+#message-actions-thread:hover, #message-thread:hover {
+  background-color: #5dbd5d;
+  color: #fff;
+}
+
+#message-actions-mark-unread, #message-mark-unread {
+  color: plum;
+}
+
+#message-actions-mark-unread:hover, #message-mark-unread:hover {
+  background-color: #c27ec2;
+  color: #fff;
+}
+
+#message-actions-copy-link, #message-copy-link {
+  color: lightseagreen;
+}
+
+#message-actions-copy-link:hover, #message-copy-link:hover {
+  background-color: #199c96;
+  color: #fff;
+}
+
+#message-actions-tts, #message-tts {
+  color: var(--brand-experiment);
+}
+
+#message-actions-tts:hover, #message-tts:hover {
+  background-color: var(--brand-experiment);
+  color: #fff;
+}
+
+#message-actions-copy-id, #message-devmode-copy-id {
+  color: lightsalmon;
+}
+
+#message-actions-copy-id:hover #message-devmode-copy-id:hover {
+  background-color: lightsalmon;
+  color: #fff;
+}
+
+#message-edit, #message-actions-edit {
+  color: steelblue;
+}
+
+#message-edit:hover, #message-actions-edit:hover {
+  background-color: steelblue;
+  color: #fff;
+}
+
+#message-add-reaction {
+  color: goldenrod;
+}
+
+#message-add-reaction:hover {
+  background-color: goldenrod;
+  color: #fff;
+}
 
 @keyframes ColorAni {
-   0% {
-      box-shadow: 0 0 0 3px #FEAC5E;
-      background-position: 0% 50%
-   }
-   25% {
-      box-shadow: 0 0 0 3px #C779D0;
-      background-position: 100% 25%
-   }
-   50% {
-      box-shadow: 0 0 0 3px #4BC0C8;
-      background-position: 100% 50%
-   }
-   75% {
-      box-shadow: 0 0 0 3px #C779D0;
-      background-position: 100% 75%
-   }
-   100% {
-      box-shadow: 0 0 0 3px #FEAC5E;
-      background-position: 0% 50%
-   }
+  0% {
+    box-shadow: 0 0 0 3px #FEAC5E;
+    background-position: 0% 50%;
+  }
+  25% {
+    box-shadow: 0 0 0 3px #C779D0;
+    background-position: 100% 25%;
+  }
+  50% {
+    box-shadow: 0 0 0 3px #4BC0C8;
+    background-position: 100% 50%;
+  }
+  75% {
+    box-shadow: 0 0 0 3px #C779D0;
+    background-position: 100% 75%;
+  }
+  100% {
+    box-shadow: 0 0 0 3px #FEAC5E;
+    background-position: 0% 50%;
+  }
 }
-[data-author-id="672822334641537041"] > .contents-2mQqc9 > .avatar-1BDn8e {
-   box-shadow: 0 0 0 3px #FEAC5E;
-   animation: ColorAni 5s ease infinite;
+[data-author-id="327559129705218049"] > .contents-2mQqc9 > .avatar-1BDn8e {
+  box-shadow: 0 0 0 3px #FEAC5E;
+  animation: ColorAni 5s ease infinite;
+}
+
+.animatedContainer-1NSq4T{
+    box-shadow: none !important;
+}
+.animatedContainer-1NSq4T:after{
+  background: linear-gradient(00deg, var(--background-secondary) 30%, transparent 100%);
+  position:absolute;
+  content: '';
+  height:30px;
+  width:100%;
+  bottom: 0;
+}
+
+[class*="toolbar-"] > [class*="search-"] [class*="searchBar-"] {
+  background: none;
+  width: 24px;
+  color: var(--color-text);
+  transition: width 0.2s, padding 0.5s;
+  padding: 0 !important;
+}
+[class*="toolbar-"] > [class*="search-"] [class*="searchBar-"] [class*="iconContainer-"] {
+  width: 24px !important;
+  height: 24px;
+  cursor: pointer !important;
+}
+[class*="toolbar-"] > [class*="search-"] [class*="searchBar-"] svg {
+  color: var(--color-text);
+  width: 24px;
+  height: 24px;
+  padding: 0.5px;
+}
+[class*="toolbar-"] > [class*="search-"] [class*="searchBar-"]:focus-within {
+  width: 300px;
+  padding: 0 10px !important;
+}
+[class*="toolbar-"] > [class*="search-"] [class*="searchBar-"]:focus-within svg {
+  color: var(--text-muted);
+  transform: scale(0.8);
+}
+
+.compact-T3H92H {
+  --reply-message-margin: 10px;
+}
+.repliedMessage-VokQwo {
+  background-color: var(--background-secondary);
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: 300ms background-color;
+  width: min-content;
+  max-width: 800px;
+}
+.repliedMessage-VokQwo:hover {
+  background-color: var(--background-modifier-hover);
+}
+.repliedMessage-VokQwo:active {
+  background-color: var(--background-modifier-active);
+}
+.repliedMessage-VokQwo::before {
+  margin-right: var(--reply-message-margin);
+}
+
+.buttons-3JBrkn>[aria-label][tabindex]{
+    display:none;
+}
+
+.subtext-3CDbHg,
+.customStatus-3tC2ig,
+.hovered-d5PMVU,
+.title-eS5yk3 {
+    background-image: linear-gradient(to left,rgb(51, 255, 0), rgb(255, 230, 0), red, rgb(234, 0, 255), rgb(0, 140, 255), rgb(51, 255, 0));
+    animation: gradient-border 4s linear infinite;
+    background-size: 400% 100%;
+    color: transparent !important;
+    -webkit-background-clip: text;
+    position: relative;
+    z-index: 1;
+}
+@keyframes gradient-border {
+from {
+  background-position: 0 0;
+}
+to {
+  background-position: 130% 0;
+}
+}
+
+  // Rainbow Server Settings
+
+@keyframes rainbow-server-settings {
+  from {color: #33FF00}
+  25%  {color: #FFE600}
+  50%  {color: red}
+  75%  {color: #EA00FF}
+  100% {color: #008CFF}
+}
+
+.button-1w5pas {
+  animation: rainbow-server-settings 4s ease-in-out infinite;
+}
+.name-1jkAdW{
+  animation: rainbow-server-settings 4s ease-in-out infinite; 
+}
+
+// Colored Context Menu
+
+#message-actions-pin, #message-pin, #message-unpin{
+    color: skyblue;
+}
+#message-actions-pin:hover, #message-pin:hover, #message-unpin:hover {
+    background-color: #67a7c0;
+    color: #fff;
+}
+#message-actions-reply, #message-reply {
+    color: khaki;
+}
+#message-actions-reply:hover, #message-reply:hover {
+    background-color: #c5bb5d;
+    color: #fff;
+}
+#message-actions-thread, #message-thread {
+    color: #69c069;
+}
+#message-actions-thread:hover, #message-thread:hover {
+    background-color: #5dbd5d;
+    color: #fff;
+}
+#message-actions-mark-unread, #message-mark-unread {
+    color: plum;
+}
+#message-actions-mark-unread:hover, #message-mark-unread:hover {
+    background-color: #c27ec2;
+    color: #fff;
+}
+#message-actions-copy-link, #message-copy-link {
+    color: lightseagreen;
+}
+#message-actions-copy-link:hover, #message-copy-link:hover {
+    background-color: #199c96;
+    color: #fff;
+}
+#message-actions-tts, #message-tts{
+    color: var(--brand-experiment);
+}
+#message-actions-tts:hover, #message-tts:hover{
+    background-color: var(--brand-experiment);
+    color: #fff;
+}
+#message-actions-copy-id, #message-devmode-copy-id {
+    color: lightsalmon;
+}
+#message-actions-copy-id:hover #message-devmode-copy-id:hover{
+    background-color: lightsalmon;
+    color: #fff;
+}
+#message-edit, #message-actions-edit{
+    color: steelblue;
+}
+#message-edit:hover,  #message-actions-edit:hover{
+    background-color: steelblue;
+    color: #fff;
+}
+#message-add-reaction{
+    color: goldenrod;
+}
+#message-add-reaction:hover{
+    background-color: goldenrod;
+    color: #fff;
+}
+  
 }
