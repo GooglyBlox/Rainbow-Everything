@@ -1,0 +1,9 @@
+{
+    "name": "Name Badges",
+    "description": "Some nice custom badges for next to usernames.",
+    "version": "1.4.0",
+    "author": "GooglyBlox_Improved#0001 & LuckFire#4800",
+    "theme": "index.scss",
+    "consent": "true",
+    "license": "MIT"
+}

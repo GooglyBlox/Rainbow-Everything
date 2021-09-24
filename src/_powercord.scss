@@ -1,0 +1,98 @@
+@use 'badges';
+
+@each $userID, $badgeLink in badges.$users {
+    [data-author-id='#{$userID}'] .username-1A8OIy, // Messaegs
+    [data-user-id="#{$userID}"] + .header-3uLluP, // Beginning of DMs
+    [data-user-id="#{$userID}"] + .text-37NqbO .username-2b1r56, // Friends List
+    [data-user-id="#{$userID}"] + .listName-U3shDM .username-2b1r56 // Mutual Friends
+    {
+        &::before {
+            content: '';
+            background: url($badgeLink) center/100% no-repeat;
+        }
+    }
+}
+
+.userPopout-xaxa6l[data-user-id="327559129705218049"] .profileBadges-ohc0Vu::before {
+  content: "";
+  position: relative;
+  width: 20px;
+  height: 17px;
+  margin: 1.5px 6px 0 0;
+  pointer-events: none;
+  background: url("https://cdn.discordapp.com/emojis/837199476317093910.png") center/100% no-repeat;
+}
+
+.member-3-YXUe .wrapper-3t9DeA[data-user-id="327559129705218049"]::before,{
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 14px;
+  bottom: -3px;
+  left: -5px;
+  z-index: 2;
+  background: url("https://cdn.discordapp.com/emojis/837199476317093910.png") no-repeat;
+  background-size: 85%;
+  border-radius: 0 5px 0 0;
+  pointer-events: none;
+}
+
+.message-2qnXI6[data-user-id="327559129705218049"] > :not(.repliedMessage-VokQwo) .username-1A8OIy,
+.message-2qnXI6[data-author-id="327559129705218049"] > :not(.repliedMessage-VokQwo) .username-1A8OIy,
+.message-2qnXI6[vz-user-id="327559129705218049"] .username-1A8OIy,
+.channel-2QD9_O[data-user-id="327559129705218049"] .overflow-WK9Ogt,
+.channel-2QD9_O[vz-user-id="327559129705218049"] .overflow-WK9Ogt,
+.member-3-YXUe[data-user-id="327559129705218049"] .roleColor-rz2vM0,
+.member-3-YXUe[vz-user-id="327559129705218049"] .roleColor-rz2vM0,
+.userPopout-xaxa6l[data-user-id="327559129705218049"] .username-2b1r56,
+.userPopout-xaxa6l[vz-user-id="327559129705218049"] .username-2b1r56,
+.root-3QyAh1[data-user-id="327559129705218049"] .username-2b1r56 {
+  color: transparent !important;
+  font-weight: bold;
+  background-size: 300%;
+  animation: shine 10s linear infinite;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(-60deg, #000000 0%, #ffffff 50%, #000000 100%);
+}
+
+
+
+@keyframes shine {
+  to {
+    background-position: 300% center;
+  }
+}
+@keyframes shine-reversed {
+  to {
+    background-position: -300% center;
+  }
+}
+
+// Rainbow Circle for FreestuffBot
+
+@keyframes ColorAni {
+   0% {
+      box-shadow: 0 0 0 3px #FEAC5E;
+      background-position: 0% 50%
+   }
+   25% {
+      box-shadow: 0 0 0 3px #C779D0;
+      background-position: 100% 25%
+   }
+   50% {
+      box-shadow: 0 0 0 3px #4BC0C8;
+      background-position: 100% 50%
+   }
+   75% {
+      box-shadow: 0 0 0 3px #C779D0;
+      background-position: 100% 75%
+   }
+   100% {
+      box-shadow: 0 0 0 3px #FEAC5E;
+      background-position: 0% 50%
+   }
+}
+[data-author-id="672822334641537041"] > .contents-2mQqc9 > .avatar-1BDn8e {
+   box-shadow: 0 0 0 3px #FEAC5E;
+   animation: ColorAni 5s ease infinite;
+}
