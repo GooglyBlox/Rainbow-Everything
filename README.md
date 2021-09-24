@@ -1,3 +1,1 @@
-THIS IS A MODIFIED RE-UPLOAD OF LUCKFIRE'S DISCORD NAME BADGES THEME, ONLY TO BE USED BY MY FRIENDS WHO WANT THEIR BADGE ADDITIONS ADDED TO IT
-
-ALL CREDITS GO TO LUCKFIRE
+Happy 3 months since Pride Month gamers, here's a bunch of really late CSS snippets mashed together to form a lot of rainbow.
