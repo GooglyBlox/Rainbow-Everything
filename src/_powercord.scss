@@ -9,11 +9,6 @@
   animation: rainbow-watermark 5s ease-in-out infinite;
 }
 
-/**
- * Snippet from #css-snippets applied the Sep 22, 2021 at 9:48:18 PM
- * Created by MulverineX#0001 (178551656714076161)
- * Snippet ID: 755182118673317979
- */
 @keyframes pride {
         100%,0%{
             color: rgb(255,0,0);
@@ -65,13 +60,7 @@
   animation-direction: alternate;
   animation-timing-function: linear;
 }
-/** 755182118673317979 */
 
-/**
- * Snippet from #css-snippets applied the Sep 22, 2021 at 9:44:05 PM
- * Created by Creation's#0001 (209830981060788225)
- * Snippet ID: 755170014893572157
- */
 @keyframes rainbow {
     0% {
         background-position: 0% 82%
@@ -99,7 +88,6 @@
     -o-animation: rainbow 18s ease infinite;
     animation: rainbow 18s ease infinite;
 }
-/** 755170014893572157 */
 
 keyframes rainbow-server-settings {
   from {
