@@ -1,8 +1,8 @@
 {
-    "name": "Name Badges",
-    "description": "Some nice custom badges for next to usernames.",
-    "version": "1.4.0",
-    "author": "GooglyBlox_Improved#0001 & LuckFire#4800",
+    "name": "Everything Rainbow",
+    "description": "A bunch of rainbow edits to the Discord UI",
+    "version": "1.0.0",
+    "author": "GooglyBlox_Improved#0001",
     "theme": "index.scss",
     "consent": "true",
     "license": "MIT"
